@@ -1,0 +1,34 @@
+{# ------------------------------------------------------- #} {# ONE OFF VIEW financialaid #} {# This page can use any data from http:localhost:2000/cms/#/form/financialaid/ #} {# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #} {# http://paularmstrong.github.io/swig/docs/tags/ #} {# Learn about calling data into Webhook pages here: #} {# http://www.webhook.com/docs/template-rules-and-filters/ #} {# ------------------------------------------------------- #} {# Confused what extends and blocks do? Watch a primer: #} {# http://www.webhook.com/docs/template-inheritance-blocks/ #} {% extends "templates/partials/base.html" %} {# This sets our page
+<title>. It will append this financialaid's name to the site title defined in base.html #} {% block title %}{% parent %} - {{ cms.financialaid.name }}{% endblock %} {% block content %}
+    <div class="container">
+        <div class="seven columns main-content">
+            <div>
+            <h1>{{ cms.financialaid.name }}</h1> {{ cms.financialaid.header_text|safe }}
+            </div>
+                {% for x in cms.nextsteps.body %} {% if loop.index%2 === 0 %}
+<script>
+                console.log({{ x | json | safe }});
+                </script>
+                <div class="light">
+                {{ x.wysiwyg_text |safe}}
+            </div>
+            {% else %}
+                <div class="dark">
+                    {{ x.wysiwyg_text|safe }}
+                </div>
+                {% endif %} {% endfor %}
+        </div>
+        <div class="five columns side-content-right pspace">
+            {{ cms.financialaid.right_sidebar|safe }}
+            <div class="one column">
+                {{ cms.financialaid.column_text_1|safe }}
+            </div>
+            <div class="one column">
+                {{ cms.financialaid.column_text_2|safe }}
+            </div>
+            <div>
+                {{ cms.financialaid.column_text_3|safe }}
+            </div>
+        </div>
+    </div>
+    {% endblock %}

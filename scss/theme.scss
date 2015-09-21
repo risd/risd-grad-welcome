@@ -1,0 +1,39 @@
+body{
+	background:white;
+	// max-width:100%;
+	margin:0 auto;
+	// background:blue;
+}
+
+p,li,h1,h2,h3,h4,h5,h6{
+	color:$green-black;
+}
+
+h3{
+	color:$green-black;
+
+}
+
+h3.contact{
+	margin-bottom:1em;
+}
+a.hotel,
+a.hotel:visited{
+	color:$blue;
+}
+
+a:link,
+a:visited{
+	color:$blue;
+	text-decoration:none;
+	// border-bottom:1px solid $blue;
+}
+
+h1{
+	color:$green-black;
+}
+
+h2{
+	color:$blue;
+}
+

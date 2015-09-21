@@ -1,41 +1,102 @@
-{# ------------------------------------------------------- #}
-
-{# YOUR HOMEPAGE #}
-
-{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
-{# http://paularmstrong.github.io/swig/docs/tags/ #}
-
-{# Learn about calling data into Webhook pages here: #}
-{# http://www.webhook.com/docs/template-rules-and-filters/ #}
-
-{# ------------------------------------------------------- #}
-
-{# Confused what extends and blocks do? Watch a primer: #}
-{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
-{% extends "templates/partials/base.html" %}
-
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
-
-{% block content %}
-
-  <h1>Hello world!</h1>
-
-  <p>This is your homepage, located at /pages/index.html.</p>
-
-  <p><a href="/cms/">Looking for the CMS?</a></p>
-
-  {# If you have at least content page type, we show a list. #}
-  {% if cms_types|size !== 0 %}
-
-    <h3>Content types you've created in the CMS so far.</h3>
-
-    <ul>
-    {% for type in cms_types %}
-      <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
-    {% endfor %}
-    </ul>
-
-  {% endif %}
-
-{% endblock %}
+{# ------------------------------------------------------- #} {# ONE OFF VIEW risdgraduatewelcomehomepage #} {# This page can use any data from http:localhost:2000/cms/#/form/risdgraduatewelcomehomepage/ #} {# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #} {# http://paularmstrong.github.io/swig/docs/tags/ #} {# Learn about calling data into Webhook pages here: #} {# http://www.webhook.com/docs/template-rules-and-filters/ #} {# ------------------------------------------------------- #} {# Confused what extends and blocks do? Watch a primer: #} {# http://www.webhook.com/docs/template-inheritance-blocks/ #} {% extends "templates/partials/base.html" %} {# This sets our page
+<title>. It will append this risdgraduatewelcomehomepage's name to the site title defined in base.html #} {% block title %}{% parent %} - {{ cms.risdgraduatewelcomehomepage.name }}{% endblock %} {% block content %}
+    <div class="container">
+        <div class="twelve columns intro" id="dean-message">
+            <div class="five columns">
+                <h1>{{ cms.risdgraduatewelcomehomepage.header_section }}</h1>
+            </div>
+            <div class="seven columns">
+                {{ cms.risdgraduatewelcomehomepage.wysiwyg_text|safe }}
+            </div>
+        </div>
+        <div class="twelve columns modules">
+            <div class="seven columns slide video">
+                {% for x in cms.modules %} {% if x.name === "Research" %}
+                <script>
+                console.log({
+                    {
+                        x | json | safe
+                    }
+                });
+                </script>
+                <img src="{{ x.image.url }}" width="544px" height="293px">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="five columns slide">
+                {% for x in cms.modules %} {% if x.name === "Student exhibitions" %}
+                <img src="{{ x.image.url }}" width="377px" height="293px">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="five columns slide">
+                {% for x in cms.modules %} {% if x.name === "Critical Making" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="two-line video">
+                    <h2 class="two-line">{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="seven columns slide video">
+                {# Download link. #} {% for x in cms.modules %} {% if x.name === "Steam" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="five columns slide">
+                {% for x in cms.modules %} {% if x.name === "RISD Museum" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="five columns slide">
+                {% for x in cms.modules %} {% if x.name === "Grad Thesis Show" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="two-line">
+                    <h2 class="two-line">{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="seven columns slide video">
+                {% for x in cms.modules %} {% if x.name === "Women in Art" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="two-line">
+                    <h2 class="two-line">{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="six columns slide">
+                {% for x in cms.modules %} {% if x.name === "Providence" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="six columns slide">
+                {% for x in cms.modules %} {% if x.name === "RISD XYZ" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+            <div class="four columns slide">
+                {% for x in cms.modules %} {% if x.name === "Faculty" %}
+                <img src="{{ x.image.url }}">
+                <a href="{{ x.website }}" class="slide-content">
+                    <h2>{{ x.single_line_text|safe }} </h2>
+                </a>
+                {% endif %} {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
