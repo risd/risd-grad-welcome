@@ -17,3 +17,8 @@ node_modules
 
 /.build
 /.firebase.conf
+
+.sass-cache
+static/css/site.css.map
+static/css/cms-custom.css.map
+*.map
