@@ -1,0 +1,160 @@
+//Basic Setup-------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+blockquote,
+figure,
+pre,
+dl,
+dd,
+ol,
+ul,
+table,
+section {
+    // @include l-verticalRhythm;
+}
+
+html {
+    font-family: $t-font--primary;
+    line-height: $t-lineHeight--normal;
+    font-weight: $t-weight--book;
+    font-size: $t-size--base;
+    color: $c-one;
+}
+
+body {
+    font-size: $t-body--large;
+    font-weight: $t-weight--light;
+}
+
+a {
+    @include t-noDecoration;
+    display: block;
+    p & {
+        display: initial;
+    }
+}
+
+strong {
+    font-weight: $t-weight--bold;
+}
+
+i,
+em {
+    @include t-emphasis;
+}
+
+p {
+    margin-bottom: $l-space--xsmall;
+}
+
+h1 {
+    font-family: $t-font--secondary;
+    font-size: $t-title--large;
+    font-weight: $t-weight--book;
+    line-height: $t-lineHeight--tight;
+    margin-bottom: $l-space--xsmall;
+    // margin-left: -$t-size--xsmall/2;
+}
+
+h2 {
+    font-family: $t-font--secondary;
+    font-size: $t-title--medium;
+    font-weight: $t-weight--book;
+    line-height: $t-lineHeight--tight;
+}
+
+h3 {
+    font-family: $t-font--secondary;
+    font-size: $t-title--small;
+    font-weight: $t-weight--book;
+    font-style: italic;
+    line-height: $t-lineHeight--normal;
+}
+
+h4 {
+    font-family: $t-font--secondary;
+    font-size: $t-title--small;
+    font-weight: $t-weight--book;
+    line-height: $t-lineHeight--normal;
+}
+
+h5 {
+    font-family: $t-font--secondary;
+    font-size: $t-title--xsmall;
+    font-weight: $t-weight--book;
+    line-height: $t-lineHeight--normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h6 {
+    font-family: $t-font--tertiary;
+    font-size: $t-body--small;
+    font-weight: $t-weight--bold;
+    line-height: $t-lineHeight--normal;
+    text-transform: uppercase;
+}
+
+figcaption {
+    font-family: $t-font--tertiary;
+    font-size: $t-body--small;
+    font-weight: $t-weight--book;
+    line-height: $t-lineHeight--normal;
+    text-align: left;
+    letter-spacing: 0.1em;
+    line-height: $t-lineHeight--tight;
+    span {
+        font-weight: $t-weight--bold;
+        text-transform: uppercase;
+    }
+}
+
+blockquote {
+    @include l-indent;
+}
+
+ol {
+    @include t-orderedList;
+}
+
+ul {
+    @include t-unorderedList;
+}
+
+div,
+img {
+    // @include l-autoSize;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+//Extra Setup ---------------------------------------
+
+main {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $l-space--xlarge;
+}
+
+section {
+    // @include l-verticalRhythm;
+    box-sizing: border-box;
+    // border-bottom: 1px solid $c-two;
+}
+
+article {
+    // box-sizing: border-box;
+    // margin: $l-space--medium auto;
+    // padding: $l-space--medium 0;
+
+}

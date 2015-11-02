@@ -1,0 +1,183 @@
+@import "../dependencies/viewports";
+
+$l-space--xsmall: .5rem*$t-lineHeight--normal;
+$l-space--small: 1rem*$t-lineHeight--normal;
+$l-space--medium: 1.5rem*$t-lineHeight--normal;
+$l-space--large: 2.5rem*$t-lineHeight--normal;
+$l-space--xlarge: 4rem*$t-lineHeight--normal;
+$l-space--xxlarge: 6rem*$t-lineHeight--normal;
+$l-space--xxxlarge: 8rem*$t-lineHeight--normal;
+
+
+@mixin l-ruleAbove() {
+    border-top: 1px solid $c-one;
+}
+
+@mixin l-ruleBelow() {
+    border-bottom: 1px solid $c-one;
+}
+
+@mixin l-container() {
+    width: 100%;
+    align-items: baseline;
+    overflow-x: hidden;
+}
+
+@mixin l-fixedPos($top: 0rem, $right: auto, $bottom: auto, $left: 0rem) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin l-absolutePos($top: 0rem, $right: auto, $bottom: auto, $left: 0rem) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin l-verticalRhythm {
+    margin-bottom: $l-space--large;
+    padding-bottom: $l-space--large;
+}
+@mixin l-horizontalRhythm {
+    margin-right: $l-space--large;
+    padding: $l-space--medium;
+}
+
+@mixin l-textWidth {
+    max-width: 30em;
+}
+
+@mixin l-autoSize {
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin l-indent {
+    margin-left: $l-space--large;
+}
+
+
+//Narrow single column usually for text blocks
+.narrowColumn {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    @include v-tablet {
+        width: 30em;
+        margin-left: auto;
+        margin-right: auto;
+    };
+}
+
+
+//Wide single column usually for hero images or galleries. Sometimes contains containers of different column widths.
+.wideColumn {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+
+.fullColumn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+//Two column container for text or text and image. Wider than the narrowColumn.
+.twoColumn {
+    padding: 0;
+    margin: 0;
+    @include v-tablet {
+    };
+    img {
+        width: 100%;
+    }
+}
+//Equal width columns
+.twoColumn-width--equal {
+    box-sizing: border-box;
+
+    @include v-tablet {
+        @include l-horizontalRhythm;
+        p {
+            @include l-textWidth;
+        }
+        img {
+            width: 100%;
+        }
+    };
+}
+//Smaller column to be paired with the larger column defined below.
+.twoColumn-width--small {
+    box-sizing: border-box;
+
+    @include v-tablet {
+        @include l-horizontalRhythm;
+        p {
+            @include l-textWidth;
+        }
+    };
+}
+.twoColumn-width--large {
+    box-sizing: border-box;
+
+    @include v-tablet {
+        @include l-horizontalRhythm;
+        p {
+            @include l-textWidth;
+        }
+    };
+}
+
+
+//Three column container. Possibly useful.
+.threeColumn {
+    padding: 0;
+    margin: 0;
+    font-size: $t-size--small;
+    @include v-tablet {
+    };
+}
+//Equal width columns
+.threeColumn-width--equal {
+    @include v-tablet {
+        p {
+            @include l-textWidth;
+        }
+        img {
+            width: 100%;
+        }
+    };
+}
+.threeColumn-width--small {
+    @include v-tablet {
+        p {
+            @include l-textWidth;
+        }
+        img {
+            width: 100%;
+        }
+    };
+}
+.threeColumn-width--large {
+    @include v-tablet {
+        p {
+            @include l-textWidth;
+        }
+        img {
+            width: 100%;
+        }
+    };
+}

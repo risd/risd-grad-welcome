@@ -1,8 +1,26 @@
-// COLORS
-$green-black: rgba(53,63,33,0.95);
-// $green-black-hover: rgba(53,63,33,0.5);
-$blue: rgb(0,172,238);
-
 @import "grid";
 @import "module";
-@import "type";
+
+
+
+//Variables, mixins, and basic classes for layout.
+@import "dependencies/color";
+@import "dependencies/type";
+@import "dependencies/layout";
+@import "dependencies/viewports";
+
+//Third party
+@import "bourbon";
+@import "neat-helpers";
+@import "dependencies/gridSettings";
+@import "neat";
+
+//CSS reset and basic styling for html elements.
+@import "foundation/reset";
+@import "foundation/base";
+
+//Global components that exist on multiple pages, but not necessarily all pages
+@import "components/header";
+
+//Page specific modules, which hopefully can distill down even further into components.
+// @import "pages/pageName";
