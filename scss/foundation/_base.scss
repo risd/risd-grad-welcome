@@ -24,7 +24,6 @@ html {
     line-height: $t-lineHeight--normal;
     font-weight: $t-weight--book;
     font-size: $t-size--base;
-    color: $c-one;
 }
 
 body {
@@ -140,16 +139,17 @@ iframe {
 //Extra Setup ---------------------------------------
 
 main {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: $l-space--xlarge;
+    @include media($mobile) {
+        @include outer-container(90vw);
+    };
+    @include media($tablet) {
+        @include outer-container(100vw);
+    };
 }
 
 section {
     // @include l-verticalRhythm;
     box-sizing: border-box;
-    // border-bottom: 1px solid $c-two;
 }
 
 article {

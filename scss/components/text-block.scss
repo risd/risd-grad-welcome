@@ -1,0 +1,112 @@
+.text-block--container {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    };
+    @include media($laptop) {
+        @include span-columns(8 of 10);
+        @include shift(1);
+    };
+    @include media($desktop) {
+        @include span-columns(6 of 12);
+        @include shift(3);
+    };
+}
+.text-block {
+
+}
+.text-block--column__full {
+    @include fill-parent;
+}
+.text-block--column__equal {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(3 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(4 of 8);
+    };
+    @include media($desktop) {
+        @include span-columns(3 of 6);
+    };
+}
+.text-block--column__small {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+        display: flex;
+        padding: $l-space--medium $l-space--medium 0 $l-space--medium;
+    };
+    @include media($tablet) {
+        @include span-columns(6 of 6);
+        display: flex;
+    };
+    @include media($laptop) {
+        @include span-columns(3 of 8);
+        display: flex;
+        padding: $l-space--medium;
+    };
+    @include media($desktop) {
+        @include span-columns(2 of 6);
+        display: flex;
+    };
+}
+.text-block--column__large {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+        padding: 0 $l-space--medium $l-space--medium $l-space--medium;
+    };
+    @include media($tablet) {
+        @include span-columns(6 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(5 of 8);
+        padding: $l-space--medium;
+    };
+    @include media($desktop) {
+        @include span-columns(4 of 6);
+    };
+}
+.text-block--primary {
+    @include fill-parent;
+    @include row;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $c--red;
+    color: $c--white;
+    font-size: $t-body--large;
+}
+.text-block--primary-title {
+    font-size: $t-title--medium;
+    color: $c--yellow;
+    font-weight: $t-weight--bold;
+    letter-spacing: .001em;
+    @include media($mobile) {
+        text-align: left;
+        align-self: flex-start;
+    };
+    @include media($laptop) {
+        text-align: center;
+        align-self: center;
+    };
+}
+.text-block--primary-subtitle {
+    font-size: $t-title--small;
+    color: $c--white;
+}
+.text-block--secondary {
+    font-size: $t-body--large;
+}
+.text-block--secondary__light {
+
+}
+.text-block--secondary__dark {
+
+}
+.text-block--tertiary {
+    font-size: $t-body--small;
+}

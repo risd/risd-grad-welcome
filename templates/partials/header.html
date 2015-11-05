@@ -2,7 +2,7 @@
 {# Simple search form, remove from search index #}
 {# insert nav #}
 {# <a class="mobile" href="#">&#9776;</a> #}
-<div class="container blackbar">
+{# <div class="container blackbar">
 <div class="five columns logo">
      	   <div class="main"><a href="index.html">RISD</a></div>
       <div class="sub"><a href="index.html">Graduate<br>Studies</a></div>
@@ -10,14 +10,61 @@
 <nav class="eleven columns offset-by-four">
       <ul>
         <li><a href="../index.html">Welcome</a></li>
-        
+
         <li><a href="/nextsteps/">Next Steps</a></li>
 
         <li><a href="/financialaid/">
-        Financial Aid</a></li>  
-        
+        Financial Aid</a></li>
+
         <li><a href="http://risd.afford.com/paynow?storeid=645">
-        Reserve your place</a></li>        
+        Reserve your place</a></li>
     </ul>
 </nav>
-</div>
+</div> #}
+
+
+{% set navData = [{
+        name: 'Welcome',
+        url:  '/'
+    }, {
+        name: 'Next Steps',
+        url:  '/nextsteps'
+    }, {
+        name: 'Financial Aid',
+        url:  '/financialaid'
+    }]
+%}
+
+{% if activeNavItem %}
+    {% for navItem in navData %}
+        {% if navItem.name === activeNavItem %}
+            {% set navItem.active = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+
+<section class="header">
+    {% for navItem in navData %}
+    {% if navItem.active %}
+        {% set cls = 'main-nav__item--active' %}
+    {% else %}
+        {% set cls = '' %}
+    {% endif %}
+        {% if loop.first %}
+        <nav class="main-nav">
+            <div class="main-nav__logo">{% include "templates/partials/logos/gradStudiesLogo.html" %}</div>
+            <ul class="main-nav__container">
+                {% endif %}
+                <li class="main-nav__item {{ cls }}">
+                    <a href="{{ navItem.url }}">{{navItem.name}}</a>
+                </li>
+                {% if loop.last %}
+                <li class="main-nav__item {{ cls }}">
+                    <a href="http://risd.afford.com/paynow?storeid=645" target="_blank">Reserve your place</a>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
+    {% endfor %}
+</section>

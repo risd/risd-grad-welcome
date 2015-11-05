@@ -283,14 +283,6 @@ p {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #1EAEDB;
-}
-
-a:hover {
-  color: #0FA0CE;
-}
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -939,15 +931,6 @@ nav .current a:link {
   color: #AD3B33 !important;
 }
 
-nav ul {
-  padding-top: 95px !important;
-  padding-left: 12px;
-  list-style: none;
-  position: absolute;
-  top: 0;
-  margin: 0 auto;
-}
-
 .blackbar {
   border-bottom: 10px solid #000;
   margin-top: 10px !important;
@@ -1079,75 +1062,6 @@ nav ul {
   text-align: right;
 }
 
-@font-face {
-  font-family: AtlasGrotesk;
-  src: url("../fonts/atlas/AtlasGrotesk-Thin.otf");
-  font-weight: 100;
-}
-@font-face {
-  font-family: AtlasGrotesk;
-  src: url("../fonts/atlas/AtlasGrotesk-Light.otf");
-  font-weight: 200;
-}
-@font-face {
-  font-family: AtlasGrotesk;
-  src: url("../fonts/atlas/AtlasGrotesk-Regular.otf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: AtlasGrotesk;
-  src: url("../fonts/atlas/AtlasGrotesk-Medium.otf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: AtlasGrotesk;
-  src: url("../fonts/atlas/AtlasGrotesk-Bold.otf");
-  font-weight: 900;
-}
-@font-face {
-  font-family: AtlasTypewriter;
-  src: url("../fonts/typewriter/AtlasTypewriter-Light.otf");
-}
-@font-face {
-  font-family: AtlasTypewriter;
-  src: url("../fonts/typewriter/AtlasTypewriter-Medium.otf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: DomaineDisplay;
-  src: url("../fonts/domaine/DomaineDisplayCondensed-Semibold.otf");
-}
-@font-face {
-  font-family: DomaineDisplayRegular;
-  src: url("../fonts/domaine-web/DomaineDisplayNarrowWeb-Regular.woff");
-  font-weight: 400;
-}
-@font-face {
-  font-family: DomaineDisplayRegular;
-  src: url("../fonts/domaine-web/DomaineDisplayNarrowWeb-RegularItalic.woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 700;
-  font-style: italic;
-}
 .narrowColumn {
   width: 100%;
   padding: 0;
@@ -1278,6 +1192,42 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
+}
+
+body:before {
+  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 100vw;
+  opacity: 0.4;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+@media screen and (min-width: 300px) {
+  body:before {
+    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 12.64237%, transparent 12.64237%, transparent 17.47153%, #eee 17.47153%, #eee 30.11389%, transparent 30.11389%, transparent 34.94305%, #eee 34.94305%, #eee 47.58542%, transparent 47.58542%, transparent 52.41458%, #eee 52.41458%, #eee 65.05695%, transparent 65.05695%, transparent 69.88611%, #eee 69.88611%, #eee 82.52847%, transparent 82.52847%, transparent 87.35763%, #eee 87.35763%, #eee 100.0%, transparent 100.0%);
+  }
+}
+@media screen and (min-width: 768px) {
+  body:before {
+    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 9.36867%, transparent 9.36867%, transparent 12.94733%, #eee 12.94733%, #eee 22.316%, transparent 22.316%, transparent 25.89467%, #eee 25.89467%, #eee 35.26334%, transparent 35.26334%, transparent 38.842%, #eee 38.842%, #eee 48.21067%, transparent 48.21067%, transparent 51.78933%, #eee 51.78933%, #eee 61.158%, transparent 61.158%, transparent 64.73666%, #eee 64.73666%, #eee 74.10533%, transparent 74.10533%, transparent 77.684%, #eee 77.684%, #eee 87.05267%, transparent 87.05267%, transparent 90.63133%, #eee 90.63133%, #eee 100.0%, transparent 100.0%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  body:before {
+    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 7.44167%, transparent 7.44167%, transparent 10.28426%, #eee 10.28426%, #eee 17.72593%, transparent 17.72593%, transparent 20.56852%, #eee 20.56852%, #eee 28.01019%, transparent 28.01019%, transparent 30.85278%, #eee 30.85278%, #eee 38.29445%, transparent 38.29445%, transparent 41.13703%, #eee 41.13703%, #eee 48.57871%, transparent 48.57871%, transparent 51.42129%, #eee 51.42129%, #eee 58.86297%, transparent 58.86297%, transparent 61.70555%, #eee 61.70555%, #eee 69.14722%, transparent 69.14722%, transparent 71.98981%, #eee 71.98981%, #eee 79.43148%, transparent 79.43148%, transparent 82.27407%, #eee 82.27407%, #eee 89.71574%, transparent 89.71574%, transparent 92.55833%, #eee 92.55833%, #eee 100.0%, transparent 100.0%);
+  }
+}
+@media screen and (min-width: 1824px) {
+  body:before {
+    background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100.0%, transparent 100.0%);
+  }
 }
 
 /* Layout */
@@ -1424,11 +1374,10 @@ a {
 }
 
 html {
-  font-family: "AtlasGrotesk", "Helvetica", "sans-serif";
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica", "sans-serif";
   line-height: 1.666;
   font-weight: 400;
   font-size: 13px;
-  color: #535252;
 }
 
 body {
@@ -1461,7 +1410,7 @@ p {
 }
 
 h1 {
-  font-family: "DomaineDisplayRegular", "Georgia", "serif";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 4.76837rem;
   font-weight: 400;
   line-height: 1;
@@ -1469,14 +1418,14 @@ h1 {
 }
 
 h2 {
-  font-family: "DomaineDisplayRegular", "Georgia", "serif";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 3.05176rem;
   font-weight: 400;
   line-height: 1;
 }
 
 h3 {
-  font-family: "DomaineDisplayRegular", "Georgia", "serif";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 1.95313rem;
   font-weight: 400;
   font-style: italic;
@@ -1484,14 +1433,14 @@ h3 {
 }
 
 h4 {
-  font-family: "DomaineDisplayRegular", "Georgia", "serif";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 1.95313rem;
   font-weight: 400;
   line-height: 1.666;
 }
 
 h5 {
-  font-family: "DomaineDisplayRegular", "Georgia", "serif";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 1.5625rem;
   font-weight: 400;
   line-height: 1.666;
@@ -1500,7 +1449,7 @@ h5 {
 }
 
 h6 {
-  font-family: "AtlasTypewriter", "Monaco", "monospace";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.666;
@@ -1508,7 +1457,7 @@ h6 {
 }
 
 figcaption {
-  font-family: "AtlasTypewriter", "Monaco", "monospace";
+  font-family: "Mercury Text G1 A", "Mercury Text G1 B", "Georgia", "serif";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.666;
@@ -1541,15 +1490,525 @@ iframe {
   width: 100%;
 }
 
-main {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6.664rem;
+@media screen and (min-width: 300px) {
+  main {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }
 
 section {
   box-sizing: border-box;
+}
+
+.header {
+  margin: 1.666rem auto 4.165rem auto;
+}
+@media screen and (min-width: 300px) {
+  .header {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.main-nav {
+  padding: 1.666rem 0;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  border-bottom: 5px solid #282832;
+}
+@media screen and (min-width: 300px) {
+  .main-nav {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 74.10533%;
+    margin-left: 12.94733%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main-nav:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 79.43148%;
+    margin-left: 10.28426%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .main-nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .main-nav__logo {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    margin-bottom: 1.666rem;
+  }
+  .main-nav__logo:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav__logo {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    margin-left: 34.94305%;
+  }
+  .main-nav__logo:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav__logo {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 35.26334%;
+    margin-left: 0%;
+    margin-bottom: 0;
+  }
+  .main-nav__logo:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .main-nav__logo {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+  }
+  .main-nav__logo:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__container {
+  list-style: none;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 300px) {
+  .main-nav__container {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .main-nav__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav__container {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  .main-nav__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav__container {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 61.158%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .main-nav__container {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 65.05695%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-nav__container:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .main-nav__item {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav__item {
+    width: auto;
+  }
+}
+.main-nav__item:hover {
+  color: #c7462a;
+}
+
+.main-nav__item--active {
+  color: #c7462a;
+}
+
+@media screen and (min-width: 300px) {
+  .text-block--container {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .text-block--container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-block--container {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 74.10533%;
+    margin-left: 12.94733%;
+  }
+  .text-block--container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-block--container {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 79.43148%;
+    margin-left: 10.28426%;
+  }
+  .text-block--container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .text-block--container {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+  }
+  .text-block--container:last-child {
+    margin-right: 0;
+  }
+}
+
+.text-block--column__full {
+  width: 100%;
+}
+
+@media screen and (min-width: 300px) {
+  .text-block--column__equal {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .text-block--column__equal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-block--column__equal {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  .text-block--column__equal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-block--column__equal {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 48.21067%;
+  }
+  .text-block--column__equal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .text-block--column__equal {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  .text-block--column__equal:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .text-block--column__small {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2.499rem 2.499rem 0 2.499rem;
+  }
+  .text-block--column__small:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-block--column__small {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .text-block--column__small:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-block--column__small {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 35.26334%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2.499rem;
+  }
+  .text-block--column__small:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .text-block--column__small {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .text-block--column__small:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .text-block--column__large {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    padding: 0 2.499rem 2.499rem 2.499rem;
+  }
+  .text-block--column__large:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-block--column__large {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .text-block--column__large:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-block--column__large {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 61.158%;
+    padding: 2.499rem;
+  }
+  .text-block--column__large:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .text-block--column__large {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 65.05695%;
+  }
+  .text-block--column__large:last-child {
+    margin-right: 0;
+  }
+}
+
+.text-block--primary {
+  width: 100%;
+  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background-color: #c7462a;
+  color: white;
+  font-size: 1.25rem;
+}
+.text-block--primary::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.text-block--primary-title {
+  font-size: 3.05176rem;
+  color: #eee809;
+  font-weight: 600;
+  letter-spacing: .001em;
+}
+@media screen and (min-width: 300px) {
+  .text-block--primary-title {
+    text-align: left;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text-block--primary-title {
+    text-align: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+
+.text-block--primary-subtitle {
+  font-size: 1.95313rem;
+  color: white;
+}
+
+.text-block--secondary {
+  font-size: 1.25rem;
+}
+
+.text-block--tertiary {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=site.css.map */
