@@ -1,5 +1,4 @@
 .header {
-    margin: $l-space--small auto $l-space--large auto;
     @include media($mobile) {
         @include outer-container(90vw);
     };
@@ -12,24 +11,11 @@
     flex-wrap: wrap;
     border-bottom: 5px solid $c--dark-grey;
     @include media($mobile) {
-        @include span-columns(6 of 6);
         display: flex;
     };
     @include media($tablet) {
-        @include span-columns(6 of 8);
-        @include shift(1);
         display: flex;
         align-items: flex-end;
-    };
-    @include media($laptop) {
-        @include span-columns(8 of 10);
-        @include shift(1);
-        display: flex;
-    };
-    @include media($desktop) {
-        @include span-columns(6 of 12);
-        @include shift(3);
-        display: flex;
     };
 }
 .main-nav__logo {
@@ -73,6 +59,8 @@
     };
 }
 .main-nav__item {
+    font-size: $t-body--large;
+    font-weight: $t-weight--book;
     @include media($mobile) {
         width: 50%;
     };

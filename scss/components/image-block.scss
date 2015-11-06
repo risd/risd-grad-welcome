@@ -1,0 +1,103 @@
+.image-block--container {
+    @include media($mobile) {
+        margin-top: flex-gutter(6);
+    };
+    @include media($tablet) {
+        margin-top: flex-gutter(8);
+    };
+    @include media($laptop) {
+        margin-top: flex-gutter(10);
+    };
+    @include media($desktop) {
+        margin-top: flex-gutter(12);
+    };
+}
+.image-block--image {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: $l-space--medium;
+    @include media($mobile) {
+        height: 300px;
+    };
+    @include media($desktop) {
+        height: 400px;
+    };
+}
+.image-block {
+    @include omega(2n);
+    @include media($mobile) {
+        margin-bottom: flex-gutter(6);
+    };
+    @include media($tablet) {
+        margin-bottom: flex-gutter(8);
+    };
+    @include media($laptop) {
+        margin-bottom: flex-gutter(10);
+    };
+    @include media($desktop) {
+        margin-bottom: flex-gutter(12);
+    };
+    &:hover {
+        .image-block--image__main {
+            display: flex;
+        }
+        .image-block--image__alt {
+            display: none;
+        }
+    }
+}
+.image-block--image__main {
+    display: none;
+}
+.image-block--image__alt {
+    display: flex;
+}
+.image-block--image__large {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(3 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(6 of 10);
+    };
+    @include media($desktop) {
+        @include span-columns(6 of 10);
+    };
+}
+.image-block--image__small {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(3 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(4 of 10);
+    };
+    @include media($desktop) {
+        @include span-columns(4 of 10);
+    };
+}
+.image-block--text {
+    // background-color: $c--red;
+    font-family: $t-font--primary;
+    font-weight: $t-weight--bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(199, 70, 48, 0.4);
+    color: $c--white;
+    padding: $l-space--xsmall;
+    // background-image:
+    // repeating-linear-gradient(
+    //   135deg,
+    //   $c--yellow,
+    //   $c--yellow 1px,
+    //   transparent 1px,
+    //   transparent 2px /* determines size */
+    // );
+}

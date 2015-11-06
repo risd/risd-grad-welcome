@@ -1,5 +1,5 @@
 @import "grid";
-@import "module";
+// @import "module";
 
 
 
@@ -20,8 +20,24 @@
 @import "foundation/base";
 
 //Global components that exist on multiple pages, but not necessarily all pages
+@import "components/global";
 @import "components/header";
+@import "components/footer";
 @import "components/text-block";
+@import "components/image-block";
 
 //Page specific modules, which hopefully can distill down even further into components.
 // @import "pages/pageName";
+
+
+body {
+    background: url("../images/home-bg.gif") no-repeat fixed center top #eee809 !important;
+    background: #eee809;
+    font: 13px/22px 'Gotham', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-weight: 400;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}

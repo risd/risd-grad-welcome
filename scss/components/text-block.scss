@@ -1,18 +1,22 @@
 .text-block--container {
     @include media($mobile) {
         @include span-columns(6 of 6);
+        margin-bottom: flex-gutter(6);
     };
     @include media($tablet) {
         @include span-columns(6 of 8);
         @include shift(1);
+        margin-bottom: flex-gutter(8);
     };
     @include media($laptop) {
         @include span-columns(8 of 10);
         @include shift(1);
+        margin-bottom: flex-gutter(10);
     };
     @include media($desktop) {
         @include span-columns(6 of 12);
         @include shift(3);
+        margin-bottom: flex-gutter(12);
     };
 }
 .text-block {
@@ -39,7 +43,6 @@
     @include media($mobile) {
         @include span-columns(6 of 6);
         display: flex;
-        padding: $l-space--medium $l-space--medium 0 $l-space--medium;
     };
     @include media($tablet) {
         @include span-columns(6 of 6);
@@ -48,7 +51,6 @@
     @include media($laptop) {
         @include span-columns(3 of 8);
         display: flex;
-        padding: $l-space--medium;
     };
     @include media($desktop) {
         @include span-columns(2 of 6);
@@ -58,33 +60,40 @@
 .text-block--column__large {
     @include media($mobile) {
         @include span-columns(6 of 6);
-        padding: 0 $l-space--medium $l-space--medium $l-space--medium;
     };
     @include media($tablet) {
         @include span-columns(6 of 6);
     };
     @include media($laptop) {
         @include span-columns(5 of 8);
-        padding: $l-space--medium;
     };
     @include media($desktop) {
         @include span-columns(4 of 6);
     };
 }
 .text-block--primary {
-    @include fill-parent;
+    // @include fill-parent;
     @include row;
     display: flex;
     flex-wrap: wrap;
     background-color: $c--red;
-    color: $c--white;
+    color: $c--light-yellow;
     font-size: $t-body--large;
+    padding: $l-space--medium;
+    a {
+        color: $c--red;
+    }
 }
 .text-block--primary-title {
     font-size: $t-title--medium;
     color: $c--yellow;
     font-weight: $t-weight--bold;
     letter-spacing: .001em;
+}
+.text-block--primary-title__left {
+    text-align: left;
+}
+.text-block--primary-title__center {
     @include media($mobile) {
         text-align: left;
         align-self: flex-start;
@@ -96,17 +105,79 @@
 }
 .text-block--primary-subtitle {
     font-size: $t-title--small;
-    color: $c--white;
+    color: $c--light-yellow;
+    font-family: $t-font--secondary;
+    font-size: $t-title--xsmall;
+    line-height: $t-lineHeight--normal;
 }
 .text-block--secondary {
     font-size: $t-body--large;
+    padding: $l-space--medium;
+    a {
+        color: $c--red;
+    }
 }
 .text-block--secondary__light {
-
+    background-color: $c--white;
 }
 .text-block--secondary__dark {
-
+    background-color: $c--light-grey;
 }
 .text-block--tertiary {
     font-size: $t-body--small;
+    background-color: $c--yellow;
+    padding: $l-space--medium;
+    a {
+        color: $c--red;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+.text-block--tertiary__one-column {
+    margin-bottom: $l-space--small;
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(6 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(3 of 3);
+    };
+    @include media($desktop) {
+        @include span-columns(2 of 2);
+    };
+}
+.text-block--tertiary__two-column {
+    @include media($mobile) {
+        @include span-columns(6 of 6);
+    };
+    @include media($tablet) {
+        @include span-columns(6 of 6);
+    };
+    @include media($laptop) {
+        @include span-columns(3 of 3);
+    };
+    @include media($desktop) {
+        @include span-columns(2 of 2);
+    };
+    ul {
+        list-style: none;
+        margin-top: $l-space--xsmall;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        width: 50%;
+    }
+}
+
+.submit-deposit {
+    display: inline-block;
+    padding: $l-space--small;
+    background-color: $c--red;
+    color: $c--light-yellow !important;
+    font-size: $t-title--small;
+    cursor: pointer;
 }

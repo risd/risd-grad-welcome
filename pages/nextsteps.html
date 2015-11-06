@@ -1,34 +1,57 @@
-{# ------------------------------------------------------- #} {# ONE OFF VIEW nextsteps #} {# This page can use any data from http:localhost:2000/cms/#/form/nextsteps/ #} {# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #} {# http://paularmstrong.github.io/swig/docs/tags/ #} {# Learn about calling data into Webhook pages here: #} {# http://www.webhook.com/docs/template-rules-and-filters/ #} {# ------------------------------------------------------- #} {# Confused what extends and blocks do? Watch a primer: #} {# http://www.webhook.com/docs/template-inheritance-blocks/ #} {% extends "templates/partials/base.html" %} {# This sets our page
-<title>. It will append this nextsteps's name to the site title defined in base.html #} {% block title %}{% parent %} - {{ cms.nextsteps.name }}{% endblock %} {% block content %}
-    <div class="container">
-        <div class="seven columns main-content">
-            <div>
-            <h1>{{ cms.nextsteps.name }}</h1> {{ cms.nextsteps.header_text|safe }}
-            </div>
-                {% for x in cms.nextsteps.body %} {% if loop.index%2 === 0 %}
-<script>
-                console.log({{ x | json | safe }});
-                </script>
-                <div class="light">
-                {{ x.wysiwyg_text |safe}}
-            </div>
-            {% else %}
-                <div class="dark">
-                    {{ x.wysiwyg_text|safe }}
+{% extends "templates/partials/base.html" %}
+
+{% block title %}{% parent %} - {{ cms.nextsteps.name }}{% endblock %}
+
+{% set nextsteps = cms.nextsteps %}
+
+{% block content %}
+
+<main class="nextsteps">
+
+    <section class="content--container">
+
+        {% block header %}
+        {% set activeNavItem = 'Next Steps' %}
+        {% include "templates/partials/header.html" %}
+        {% endblock %}
+
+        <div class="text-block--column__large">
+        <div class="text-block--primary">
+                <div class="text-block--column__full">
+                    <h1 class="text-block--primary-title text-block--primary-title__left">{{ nextsteps.name }}</h1>
+                    <div class="text-block--primary-subtitle">{{ nextsteps.header_text|safe }}</div>
                 </div>
-                {% endif %} {% endfor %}
+            </div>
+            {% for row in nextsteps.body %}
+                {% if loop.index%2 === 0 %}
+                    <div class="text-block--secondary text-block--secondary__light">
+                        {{ row.body_text|safe }}
+                    </div>
+                {% else %}
+                    <div class="text-block--secondary text-block--secondary__dark">
+                        {{ row.body_text|safe }}
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-        <div class="five columns side-content-right">
-            {{ cms.nextsteps.right_sidebar|safe }}
-            <div class="one column">
-                {{ cms.nextsteps.column_text_1|safe }}
-            </div>
-            <div class="one column">
-                {{ cms.nextsteps.column_text_2|safe }}
-            </div>
-            <div>
-                {{ cms.nextsteps.column_text_3|safe }}
+        <div class="text-block--column__small">
+            <div class="text-block--tertiary">
+                {% for row in nextsteps.sidebar %}
+                    {% if row.columns === "One Column" %}
+                        <div class="text-block--tertiary__one-column">
+                            {{ row.sidebar_text|safe }}
+                        </div>
+                    {% elseif row.columns === "Two Column" %}
+                        <div class="text-block--tertiary__two-column">
+                            {{ row.sidebar_text|safe }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
-    </div>
-    {% endblock %}
+
+    </section>
+
+</main>
+
+{% endblock %}

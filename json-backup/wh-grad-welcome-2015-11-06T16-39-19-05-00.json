@@ -1,0 +1,708 @@
+﻿{
+  "contentType": {
+    "financialaid": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Financial Aid",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Header text",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "header_text",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "wysiwyg",
+          "help": "Main body content",
+          "hidden": false,
+          "label": "Left body section",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "left_body_section",
+          "placeholder": "",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "wysiwyg",
+          "help": "Right sidebar column",
+          "hidden": false,
+          "label": "Right sidebar",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "right_sidebar",
+          "placeholder": "",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "Financial Aid",
+      "oneOff": true,
+      "oneOffMD5": "5904fc1399c6acabd09c5d9aa3e4311a"
+    },
+    "home": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "RISD Graduate Welcome",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textarea",
+          "help": "Header section content",
+          "hidden": false,
+          "label": "Header section",
+          "locked": false,
+          "name": "header_section",
+          "placeholder": "",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Welcome Text",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "welcome_text",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "textfield",
+              "hidden": false,
+              "label": "Title",
+              "locked": false,
+              "name": "title",
+              "required": false,
+              "showInCms": false
+            },
+            {
+              "controlType": "image",
+              "hidden": false,
+              "label": "Image",
+              "locked": false,
+              "name": "image",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "image",
+              "hidden": false,
+              "label": "Image Alt",
+              "locked": false,
+              "name": "image_alt",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "url",
+              "hidden": false,
+              "label": "Link",
+              "locked": false,
+              "name": "link",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "hidden": false,
+          "label": "Image Module",
+          "locked": false,
+          "name": "image_module",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "Home",
+      "oneOff": true,
+      "oneOffMD5": "17a59d0c0390523ebb32382ab83feb6f"
+    },
+    "nextsteps": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Next Steps",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Header text",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "header_text",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "wysiwyg",
+              "hidden": false,
+              "label": "Body text",
+              "locked": false,
+              "meta": {
+                "image": true,
+                "javascript": true,
+                "link": true,
+                "quote": true,
+                "table": true,
+                "video": true
+              },
+              "name": "body_text",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "hidden": false,
+          "label": "Body",
+          "locked": false,
+          "name": "body",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "wysiwyg",
+              "hidden": false,
+              "label": "Sidebar Text",
+              "locked": false,
+              "meta": {
+                "image": true,
+                "javascript": true,
+                "link": true,
+                "quote": true,
+                "table": true,
+                "video": true
+              },
+              "name": "sidebar_text",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "radio",
+              "hidden": false,
+              "label": "Columns",
+              "locked": false,
+              "meta": {
+                "defaultValue": "One Column",
+                "options": [
+                  {
+                    "value": "One Column"
+                  },
+                  {
+                    "value": "Two Column"
+                  }
+                ]
+              },
+              "name": "columns",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "hidden": false,
+          "label": "Sidebar",
+          "locked": false,
+          "name": "sidebar",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "wysiwyg",
+          "help": "Right sidebar column",
+          "hidden": false,
+          "label": "Right sidebar",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "right_sidebar",
+          "placeholder": "",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "column text 1",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "column_text_1",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "column text 2",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "column_text_2",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "column text 3",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "javascript": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "column_text_3",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "Next steps",
+      "oneOff": true,
+      "oneOffMD5": "19e3481093cce94e2f747c3e00eeb8ac"
+    }
+  },
+  "data": {
+    "financialaid": {
+      "_sort_create_date": 1439495940,
+      "_sort_last_updated": 1440435600,
+      "create_date": "2015-08-13T15:59:00-04:00",
+      "header_text": "<p>Admitted students awarded either a RISD graduate fellowship or federal student aid were sent financial aid award letters in the admissions packets. The Financial Aid Office is happy to answer any questions you may have about these awards.\n</p>\n<p>Assistantship awards are usually made later, but your graduate program director should be able to give you a preliminary idea of whether such assistance is available, the approximate amount and what your responsibilities will entail. If you are awarded an assistantship, the Graduate Studies Office will provide the appropriate forms so that you can access funds beginning in September.\n</p>\n<p>The following list offers an overview of the types of aid available to graduate students. More detailed information about deadlines and requirements is available on our website.\n</p>",
+      "last_updated": "2015-08-24T13:00:00-04:00",
+      "left_body_section": "<h4>RISD Fellowships</h4>\n<p>RISD provides fellowship funding to graduate students based on merit and/or financial need. Awarding of fellowships is administered through each academic department.\n</p>\n<h4>RISD Assistantships</h4>\n<p>Assistantships are awarded by the student’s academic department and may be assigned for fall, Wintersession, spring and/or summer. Typically, assistantships are assigned for one academic year at a time.\n</p>\n<h4>Federal Student Loans</h4>\n<p>The Federal Direct Loan is a low-interest loan for eligible students to help cover the cost of higher education. Students borrow and repay this loan directly.\n</p>\n<h4>Federal GradPLUS Loan</h4>\n<p>GradPLUS loans assist eligible graduate students with paying for college expenses. A GradPLUS loan is a credit-based loan. Graduate students may borrow any amount up to the total cost of attendance minus financial aid awarded to the student.\n</p>\n<h4>Alternative (Private) Loans</h4>\n<p>Alternative loans are private education loans offered by lenders to undergraduate and graduate students. We recommend that students exhaust all personal and federal options before exploring alternative loans as they do not provide the same benefits as federal loans.\n</p>\n<h4>Alternate Payment Plan</h4>\n<p>Since paying for a college education can be a challenge, RISD offers a Tuition Management Systems (TMS) Payment Plan, which allows students to spread payments for tuition, housing and dining over an extended period of time. Under the TMS Payment Plan, each semester’s tuition and fees are spread out over five equal installments. For more information please go to afford.com.\n</p>\n<h4>Outside Scholarships</h4>\n<p>You’re encouraged to explore outside scholarship opportunities that may be available through employers, civic, community and/or religious organizations. RISD students have a strong history of securing outside scholarships. A detailed listing of organizations that have provided funding to our students in the past can be found on our website. If you do receive outside funding, you must notify the Financial Aid Office.\n</p>\n<h4>Repayment Programs + Loan Forgiveness Programs</h4>\n<p>The federal government offers a number of loan repayment programs and options. We encourage you to explore them at studentloans.gov. In addition, for students who are committed to working in public service after graduation, we encourage you to explore the Federal Public Service Loan Forgiveness Program at ibrinfo.org.\n</p>",
+      "name": "Financial Aid",
+      "preview_url": "02254288-c707-814f-60b3-a27d1a505b14",
+      "right_sidebar": "<h4>questions?</h4>\n<p>Financial Aid Office <br>\n\t401 454-6661<br>\n\t<a href=\"mailto:financialaid@risd.edu\">financialaid@risd.edu</a><br>\n</p>\n<h4>plan in advance</h4>\n<p>In planning for graduate studies, it’s important to begin well in advance if you need to depend on financial assistance to achieve educational objectives. You should consider whether you have paid off all possible consumer debt, you have sufficient savings to cover expenses not included in the cost of attendance and your current student loans are in good standing.\n</p>\n<p>In addition, one of the biggest financial challenges for graduate students comes at the beginning of each semester. Since financial aid refunds and assistantship checks are typically not available until after the start of classes, you are encouraged to prepare for this cash flow situation by arriving on campus with your own funding to get started.\n</p>\n<h4>loan calculators</h4>\n<p>It’s important to understand the true cost of your education. We encourage you to explore estimated monthly loan payments and repayment options for federal student loans and to use the loan calculators available at studentloans.gov.\n</p>\n<h4>risd career center</h4>\n<p>RISD’s Career Center offers a wide range of interesting workshops and programs specifically tailored towards entrepreneurship and other career opportunities in art, design and a growing realm of related areas.\n</p>"
+    },
+    "home": {
+      "_sort_create_date": 1439495580,
+      "_sort_last_updated": 1446840840,
+      "create_date": "2015-08-13T15:53:00-04:00",
+      "header_section": "Welcome to the Conversation\n",
+      "image_module": [
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/iPtYQsCMzxOi-9mSsEmTfmPF-CGT-ngVBO9gAoyPZlIaaRhobdcvTjnUR_7AtFQEIAGOeQwOAK3VOO2k8ucNeN_1VtSn",
+            "url": "/webhook-uploads/1446839828845/HWYCtLWUeehCLqZfbkB6ae-FLDkj0jOTipfrbYUYbxsJWEMwhuI-8Byv_MR2HPYf9rhV1SYQhBVwkGPPdm3KzeoGokMN%3Ds1425",
+            "width": 520
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/60bE4odoUspvNnr3ljQjJ6KnlC3jIZ3iy2fZvGkSfBsuiveJic4XQwG-4RF_sWBAJtOzK5Iaee5MShZcXEyNkYmkIk-r1w",
+            "size": 96906,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840798813/research_1.jpg",
+            "width": 520
+          },
+          "link": "http://www.risd.edu/templates/content.aspx?id=6442457496",
+          "title": "Research"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/JDw3-lB8sRMi1EePLItGdy8XM3LoGi8K2nOzE7acj6kniMaxAehXDJ74vRJ6jwpYMNHirLup7ROIPYoHvCl9wIApDXDd",
+            "url": "/webhook-uploads/1446839810958/KRY-fXtayDL9Oe1Jga_QWlKgjiTu7mNy_g2NndX-x0KvIohi1aIFugSdLMPfUfWHxJ2sKCIi_OHchQb_rWobgZLHeXY%3Ds1425",
+            "width": 400
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/gbq7tQQRcwz8sDkQBjLFh_TxdzllCfu9W-y6AErX2SS4pSfupWj5vktBL0iTasLkrPWF-Gyh53-ldPG0OrQcL9ELVGWeLA",
+            "size": 123961,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840809382/studentexhibitions_1.jpg",
+            "width": 400
+          },
+          "link": "http://our.risd.edu/tagged/risd-openings",
+          "title": "Student exhibitions"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/mcFJWlJj0rOFxXUJQ-PPj4XzdtOnHA7qtcLtrIJzCzd--tfBC0P1_ioerMDsJsfusffEA2gmru11pKSVz_yCRWfdJ0EFzQ",
+            "url": "/webhook-uploads/1446839792969/vjVbD2Sf67jSkrLnuiEHFPzalkjLRQ68zC379yYxypdoRefuXImNxUO-l8_TRVcSSDX0AE2rPxxv9kmsAVWJ0WnjLH0%3Ds1425",
+            "width": 399
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/w_UPFVFfKykUctijU7Rs_qWK1g_N9fG_9kbO-Df6vWODpd6jakwDNxe34yrPIzEXUmUa7h6s4avKVUBbpJ8R_8QqWN-j",
+            "size": 83587,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840815329/criticalmaking_1.jpg",
+            "width": 399
+          },
+          "link": "https://vimeo.com/99810998",
+          "title": "Critical Making"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/uTflAgyHZacMMhhDckYUX87i35c32cVGspdgAnHUtOy8BmF5_pE4c9gPbW4cC7sF2jC6r7LGgrOuUwG8bb_B0UcRyTBM",
+            "url": "/webhook-uploads/1446839742552/CaQQaKwIwQlbTsKX_IAqbhD4XndwWlFg-dd7HulDAnPAL0VxfsYzW5UhuCt6v6BS_452pDW9EeQM4vX3HsplEpkb8OU-%3Ds1425",
+            "width": 520
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/IqKNbZGMSHSHXRu14rwQy30bpA1rOuOFFyQU6R5NsvZAHeuj2gE1tgtBkQb2vWzfaZklZXACQuQnjSaw2opVGcQXbfroJw",
+            "size": 162370,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840821075/steam_1.jpg",
+            "width": 520
+          },
+          "link": "http://www.risd.edu/templates/content.aspx?id=6442457497",
+          "title": "Steam@RISD"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/HLIKh41euHQjFwZe7tKxMSU12xyDfbZw-seazJ88Y1uUivA1xtkLqXrUV_54eqcprxMBO0bhq-GqM6ziJYtHS9QCb1gv",
+            "url": "/webhook-uploads/1446839624983/jElOmvH11S4CaOEofzkG27xVYtJZv0fZqI_IJ06u2h7XL6xNxj7C67ZAVviiOMuk8n1f4OVHjTdUz6RKN-Nxl1cjhcN09A%3Ds1425",
+            "width": 520
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/U80sPUmjc7ojDRFBJ5OtKSGhfpB8YqAbB_WpT1M9_VQ4IatXt0RCs29m8Kn6jFRv7bWDOO2LzBoKpgU8xm8md_N2sjw",
+            "size": 94017,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840827624/xyz_1.jpg",
+            "width": 520
+          },
+          "link": "http://issuu.com/risd/docs/risdxyz_fall-winter_2014-15",
+          "title": "RISD XYZ"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/WmzTyDON_5dGnaZEB_eyJvCVd7OOeH8A5lSXlxWaptG_IxCoaNng69xyAeD9R4pNHo0czpGgfAyxiR4TU7MXzX8kCkE",
+            "url": "/webhook-uploads/1446839645486/jyy4xRPomIb-OAloD6h7P3yhwrnmWri34BdYErKcs-ARvtf_-8tz8faRe7e3sWBJn12Asc1ykHeA2CkXi4R4SP83uPeK%3Ds1425",
+            "width": 520
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/atXmZqjj92xRQZZABDsg2S7dk4gE_NpA89sSZaNZQOaIrZEgFZ3Et8IfUVGj2GZUPmDM0npOCIf5jqEjXHUePIR_c7hA",
+            "size": 189417,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840836541/providence_1.jpg",
+            "width": 520
+          },
+          "link": "http://downtownprovidence.com/",
+          "title": "Providence"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/xLQ0z4le_9UST-rv9zcdTdVZHz97KW_soZQL8QHZWSBFEDcKt4x-liKteiixxkS0VsuqJ0u3p1g9h_88ucSUTspAL5MV",
+            "url": "/webhook-uploads/1446839947898/R-eQfN_G3_VW6UBWgRfYEmdbVCX71nYbZ1SbtY1g8tjWKlnI5KxRMNGD38EgDDmQF8VuYbFsnELTW6JKdc3T-Q0vf2HS%3Ds1425",
+            "width": 400
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/bWigHStpZJGR5SmT5stFbU10yRQNlXARwg0MuEaDDCazuKwrZJ0rpRx9gQb3dwcsesSG3vz5ugV3-NK-x_4KO2O95pRI",
+            "size": 102363,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840842186/womeninart_1.jpg",
+            "width": 400
+          },
+          "link": "http://our.risd.edu/post/74407269050/girls-star-talks-women",
+          "title": "Women in Art"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/QiAkQs6nxvajt0KiqGA05ZkbN-dEqGjDeGknOuRjvv6IpmjgPG9F1iORv_HpGfwSXxidrmRpw1lLy8a3kfUgUB9KQRA3yA",
+            "url": "/webhook-uploads/1446839698938/ROjcn1vdxU_kmqiolcUyu3YWe31q1yZKlDIAPK2jnUdaKEHWfwpeaP4X92TOoyH0ehdpX9tefX09inO3d_zwleJN-YZ0%3Ds1425",
+            "width": 400
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/ql7Wz6-KQ9j_A1VYbYKkCth6fjs_XTjiTfQ1Qqs4RKTU9d7JuP_RugE3nYC2iGeJDjXIizymJMmrtKBkqErbTNUy4YIV",
+            "size": 136726,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840853497/gradexhibition_1.jpg",
+            "width": 400
+          },
+          "link": "http://gradexhibition.risd.edu/",
+          "title": "Grad Thesis Show"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/y4NQjRafd2vHKzxiVdHOHR92bXXYgAg05u3a9q3BkC7VKKOnL0vrUbjR80QyQUJuGIxC-Nxaj40ZQl3HySPveOI1eHs",
+            "url": "/webhook-uploads/1446839963380/3AbSV19dXdj9np26PICDcjvyq_wrbZP_c0LQ96t1iKZQ2svrOoAKG4thg4LCv0FwDhA3sBVqaQ0hsoCKODJSoFeff4DG%3Ds1425",
+            "width": 520
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/yvaaS1kNahcE4EpxAJemGcKh8VWkVN5DrXZdBJF5IwINilmxIHXB36RJ24QDwR-wm1aodGYXpWt5utPbGhuNLooUrj4",
+            "size": 115461,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840860148/risdmuseum_1.jpg",
+            "width": 520
+          },
+          "link": "http://risdmuseum.org/",
+          "title": "RISD Museum"
+        },
+        {
+          "image": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/pFuZI0Agbj5sATNSjAmCsIAh5yUiit0rzMUPVtS8Iwe_pw01-zwxoRm-fSl09Vfii6HOJI1N_mCJsg0d0wHX_8tiuTRk",
+            "url": "/webhook-uploads/1446839601114/9XQwe_jAJDVFuiVlTyiHRM63mIP6ObGn3sDQ8teGVTVuWkveVB_A-TFLx3C9DsdzjlwlAq6lT6oFOVZDulhbAfhUETY-qw%3Ds1425",
+            "width": 400
+          },
+          "image_alt": {
+            "height": 293,
+            "resize_url": "http://lh3.googleusercontent.com/T1rQd8N88KpAQosjv8jgzBo17CwjJ61SqgFs4r6SRxcJ8pWhJMylDt_hqZHcvCgeE1UpPDVylvZIS7o3yrbpGEPKFSY",
+            "size": 125007,
+            "type": "image/jpeg",
+            "url": "/webhook-uploads/1446840866235/faculty_1.jpg",
+            "width": 400
+          },
+          "link": "http://our.risd.edu/tagged/risd-faculty",
+          "title": "Faculty"
+        }
+      ],
+      "last_updated": "2015-11-06T15:14:00-05:00",
+      "name": "RISD Graduate Welcome",
+      "preview_url": "75f9db88-a4e4-6e5d-0753-f607a305add5",
+      "welcome_text": "<p>I hope you’re as excited about your acceptance as we are to welcome you to our dynamic and intellectually vibrant graduate community. At RISD you’ll engage with students from around the globe who are deeply committed to progressive and ethical practices – and who understand the significance of creative practice and problem solving in an increasingly complex world. While commitment to a discipline is a central feature of graduate education at RISD, you’ll also take interdisciplinary seminars and workshops, have access to classes and resources at Brown University, benefit from a steady stream of visiting artists and designers, and participate in an expansive range of artistic and intellectual opportunities beyond the studio.\n</p>\n<p>I truly respect the effort, achievements and commitment you have made to prepare for success as a graduate student at RISD and look forward to getting to know you better this fall.\n</p>\n<p><strong>Patricia Phillips</strong>  Dean of Graduate Studies\n</p>"
+    },
+    "nextsteps": {
+      "_sort_create_date": 1439495700,
+      "_sort_last_updated": 1446845580,
+      "body": [
+        {
+          "body_text": "<h3>by April 15</h3>\n<p>Submit a nonrefundable enrollment deposit of $500 to reserve your space (this is applied to your first tuition bill). Please use our secure online site to\n</p>\n<p><a class=\"submit-deposit\" href=\"http://risd.afford.com/paynow?storeid=645\">pay your deposit now »</a>\n</p>\n<p><strong></strong>by credit card or authorize a bank transfer from your checking or savings account. If you choose the online option, you’ll need to indicate your name, RISD student ID number and the semester you will enroll (as indicated in your acceptance letter). All future tuition bills and other fees may be paid at this site as well.\n</p>\n<p>If you choose to submit your deposit as a check or money order made out to Rhode Island School of Design, <a href=\"http://gradwelcome.risd.edu/pdf/Enrollment-option-via-post-2015.pdf\">download the Enrollment Form</a>, fill it out and return it in the prepaid envelope sent in your admissions packet.\n</p>"
+        },
+        {
+          "body_text": "<h3>by June 1</h3>\n<p>Complete a housing application via <a href=\"https://starrez.risd.edu/Default.aspx?Params=L9ezxPcQnQv4nZaoFgXgMpAKafij5WZU\" target=\"_blank\">RISD’s Housing Portal</a> if you wish to live in <a href=\"http://www.risd.edu/students/residence-life/new/\" target=\"_blank\">RISD Housing</a>. You need a user name and password to enter this site, but both will be sent once your enrollment deposit is received.\n</p>"
+        },
+        {
+          "body_text": "<h3>by July 1</h3>\n<p>Show proof that you have satisfactorily completed your undergraduate education by having your final official transcript sent to the Admissions Office, if you have not already done so, or if you are receiving your<br>\n</p>\n<p>baccalaureate degree this spring.\n</p>"
+        },
+        {
+          "body_text": "<p>Thank you again for your effort and cooperation during the application process. The Student Affairs Office will provide more detailed enrollment and orientation information once RISD has received your enrollment deposit.\n</p>\n<p>If you move before coming to RISD, please notify the Admissions Office of your new address so that you receive all information mailed out this summer.\n</p>\n<p>The Graduate Studies Office and the Graduate Student Alliance look forward to welcoming you to our community.\n</p>"
+        }
+      ],
+      "column_text_1": "<p>ARCHITECTURE <br><strong>Hansy Better <br></strong><strong></strong>Associate Professor <br>401 454-6281 <br><a href=\"mailto:mailto:hbetter@risd.edu\">hbetter@risd.edu</a>\n</p>\n<p>CERAMICS <br><strong>Katy Schimert</strong> <br>Associate Professor <br>401 454-6230 <br><a href=\"mailto:mailto:kschimer@risd.edu\">kschimer@risd.edu</a>\n</p>\n<p>DIGITAL+MEDIA <br><strong>Shona Kitchen</strong> <br>Assistant Professor <br>401 427-6912 <br><a href=\"mailto:mailto:skitchen@risd.edu\">skitchen@risd.edu</a>\n</p>\n<p>FURNITURE DESIGN <br><strong>Chris Rose </strong><br>Critic <br>401 454-6683 <br><a href=\"mailto:mailto:crose@risd.edu\">crose@risd.edu</a>\n</p>\n<p>GLASS <br><strong>Rachel Berwick</strong> <br>Professor <br>401 454-6786 <br><a href=\"mailto:mailto:rberwick@risd.edu\">rberwick@risd.edu</a>\n</p>\n<p>GRAPHIC DESIGN <br><strong>Bethany Johns</strong> <br>Professor <br>401 427-6956 <br><a href=\"mailto:mailto:bjohns@risd.edu\">bjohns@risd.edu</a>\n</p>\n<p>INDUSTRIAL DESIGN <br><strong>Andy Law</strong> <br>Associate Professor <br>401 277-4846 <br><a href=\"mailto:mailto:alaw@risd.edu\">alaw@risd.edu</a>\n</p>\n<p>INTERIOR ARCHITECTURE <br><strong>Markus Berger</strong> <br>Associate Professor <br>401 454-6288 <br>\n</p>\n<p><a href=\"mailto:mailto:mberger@risd.edu\">mberger@risd.edu</a>\n</p>",
+      "column_text_2": "<p>JEWELRY +METALSMITHING <br><strong>Tracy Steepy</strong> <br>Associate Professor <br>401 427-6953 <br><a href=\"mailto:mailto:tsteepy@risd.edu\">tsteepy@risd.edu</a>\n</p>\n<p>LANDSCAPE ARCHITECTURE <br><strong>Scheri Fultineer</strong> <br>Associate Professor <br>401 454-6286 <br><a href=\"mailto:mailto:sfultine@risd.edu\">sfultine@risd.edu</a>\n</p>\n<p>PAINTING <br><strong>Dennis Congdon</strong> <br>Professor <br>401 454-6158 <br><a href=\"mailto:mailto:dcongdon@risd.edu\">dcongdon@risd.edu</a>\n</p>\n<p>PHOTOGRAPHY <br><strong>Steve Smith</strong> <br>Associate Professor <br>401 277-4929 <br><a href=\"mailto:mailto:ssmith@risd.edu\">ssmith@risd.edu</a>\n</p>\n<p>PRINTMAKING<br><strong>Brian Shure</strong> <br>Assistant Professor <br>401 454-6529<br><a href=\"mailto:mailto:bshure@risd.edu\">bshure@risd.edu</a>\n</p>\n<p>SCULPTURE <br><strong>Taylor Baldwin</strong> <br>Assistant Professor <br>401 454-6190 <br><a href=\"mailto:mailto:tbaldwin@risd.edu\">tbaldwin@risd.edu</a>\n</p>\n<p>TLAD <br><strong>Paul Sproll</strong> <br>Professor <br>401 454-6132 <br><a href=\"mailto:mailto:psproll@risd.edu\">psproll@risd.edu</a>\n</p>\n<p>TEXTILES <br><strong>Mary Anne Friel</strong> <br>Assistant Professor <br>401 709-8429 <br><a href=\"mailto:mailto:mfriel@risd.edu\">mfriel@risd.edu</a>\n</p>",
+      "column_text_3": "<h4>risd career center </h4>\n<p>RISD’s <a href=\"http://www.risdcareers.com/\">Career Center</a> offers a wide range of interesting workshops and programs specifically tailored towards entrepreneurship and other career opportunities in art, design and a growing realm of related areas.\n</p>\n<h4>download pdfs</h4>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Enrollment-option-via-post-2015.pdf\">Enrollment option via post</a>\n</p>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Summer-Foundation-Studies-Program-2015.pdf\">Summer Foundation Studies Program</a>\n</p>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Computers-Networks-at-RISD-2015.pdf\">Computers+Networks at RISD</a>\n</p>",
+      "create_date": "2015-08-13T15:55:00-04:00",
+      "header_text": "<p>To reserve your place at RISD and enroll for this fall, please complete the following steps by the dates indicated:\n</p>",
+      "last_updated": "2015-11-06T16:33:00-05:00",
+      "name": "Next Steps",
+      "preview_url": "a6f606d8-2ebf-51f4-fbb4-75e3fec990cc",
+      "right_sidebar": "<h4>questions?</h4>\n<p><strong>Admissions Office</strong>\n\t<br>401 454-6300\n\t<br>800 364-7473\n\t<br><a href=\"mailto:admissions@risd.edu\">admissions@risd.edu</a>\n</p>\n<p><strong>Patti Phillips</strong>\n\t<br>Dean of Graduate Studies\n\t<br>401 454-6134\n\t<br><a href=\"mailto:pphillip02@risd.edu\">pphillip02@risd.edu</a>\n</p>\n<p><strong>Amy Patenaude</strong>\n\t<br>Administrative Coordinator\nGraduate Studies\n\t<br>401 454-6131\n\t<br><a href=\"apatenau@risd.edu\">apatenau@risd.edu</a>\n</p>\n<h4>graduate student alliance</h4>\n<p>\n\t<br>\tAn organization run by grad students and supported by RISD’s Center for Student Involvement, the Graduate Student Alliance (GSA) sponsors events and activities to enhance the graduate student experience on campus.\n</p>\n<h4>graduate program directors</h4>",
+      "sidebar": [
+        {
+          "columns": "One Column",
+          "sidebar_text": "<h4>questions?</h4>\n<p>Admissions Office <br>401 454-6300 <br>800 364-7473 <br><a href=\"mailto:admissions@risd.edu\">admissions@risd.edu</a>\n</p>\n<p>Patti Phillips <br>Dean of Graduate Studies <br>401 454-6134 <br><a href=\"mailto:pphillip02@risd.edu\">pphillip02@risd.edu</a>\n</p>\n<p>Amy Patenaude <br>Administrative Coordinator Graduate Studies <br>401 454-6131 <br><a href=\"http://localhost:2002/cms/apatenau@risd.edu\">apatenau@risd.edu</a>\n</p>\n<h4>graduate student alliance</h4>\n<p>An organization run by grad students and supported by RISD’s Center for Student Involvement, the Graduate Student Alliance (GSA) sponsors events and activities to enhance the graduate student experience on campus.\n</p>"
+        },
+        {
+          "columns": "Two Column",
+          "sidebar_text": "<h4>graduate program directors</h4>\n<ul>\n\t<li>ARCHITECTURE\n\t<br>\n\t<strong>Hansy Better\n\t<br>\n\t</strong>\n\t<strong></strong>Associate Professor\n\t<br>401 454-6281\n\t<br><a href=\"mailto:mailto:hbetter@risd.edu\">hbetter@risd.edu</a>\n\t</li>\n\t<li>CERAMICS\n\t<br>\n\t<strong>Katy Schimert</strong>\n\t<br>Associate Professor\n\t<br>401 454-6230\n\t<br><a href=\"mailto:mailto:kschimer@risd.edu\">kschimer@risd.edu</a>\n\t</li>\n\t<li>DIGITAL+MEDIA\n\t<br>\n\t<strong>Shona Kitchen</strong>\n\t<br>Assistant Professor\n\t<br>401 427-6912\n\t<br><a href=\"mailto:mailto:skitchen@risd.edu\">skitchen@risd.edu</a>\n\t</li>\n\t<li>FURNITURE DESIGN\n\t<br>\n\t<strong>Chris Rose </strong>\n\t<br>Critic\n\t<br>401 454-6683\n\t<br><a href=\"mailto:mailto:crose@risd.edu\">crose@risd.edu</a>\n\t</li>\n\t<li>GLASS\n\t<br>\n\t<strong>Rachel Berwick</strong>\n\t<br>Professor\n\t<br>401 454-6786\n\t<br><a href=\"mailto:mailto:rberwick@risd.edu\">rberwick@risd.edu</a>\n\t</li>\n\t<li>GRAPHIC DESIGN\n\t<br>\n\t<strong>Bethany Johns</strong>\n\t<br>Professor\n\t<br>401 427-6956\n\t<br><a href=\"mailto:mailto:bjohns@risd.edu\">bjohns@risd.edu</a>\n\t</li>\n\t<li>INDUSTRIAL DESIGN\n\t<br>\n\t<strong>Andy Law</strong>\n\t<br>Associate Professor\n\t<br>401 277-4846\n\t<br><a href=\"mailto:mailto:alaw@risd.edu\">alaw@risd.edu</a>\n\t</li>\n\t<li>INTERIOR ARCHITECTURE\n\t<br>\n\t<strong>Markus Berger</strong>\n\t<br>Associate Professor\n\t<br>401 454-6288\n\t<br><a href=\"mailto:mailto:mberger@risd.edu\">mberger@risd.edu</a>\n\t</li>\n\t<li>JEWELRY +METALSMITHING\n\t<br>\n\t<strong>Tracy Steeliy</strong>\n\t<br>Associate Professor\n\t<br>401 427-6953\n\t<br><a href=\"mailto:mailto:tsteeliy@risd.edu\">tsteeliy@risd.edu</a>\n\t</li>\n\t<li>LANDSCAPE ARCHITECTURE\n\t<br>\n\t<strong>Scheri Fultineer</strong>\n\t<br>Associate Professor\n\t<br>401 454-6286\n\t<br><a href=\"mailto:mailto:sfultine@risd.edu\">sfultine@risd.edu</a>\n\t</li>\n\t<li>PAINTING\n\t<br>\n\t<strong>Dennis Congdon</strong>\n\t<br>Professor\n\t<br>401 454-6158\n\t<br><a href=\"mailto:mailto:dcongdon@risd.edu\">dcongdon@risd.edu</a>\n\t</li>\n\t<li>PHOTOGRAPHY\n\t<br>\n\t<strong>Steve Smith</strong>\n\t<br>Associate Professor\n\t<br>401 277-4929\n\t<br><a href=\"mailto:mailto:ssmith@risd.edu\">ssmith@risd.edu</a>\n\t</li>\n\t<li>PRINTMAKING\n\t<br>\n\t<strong>Brian Shure</strong>\n\t<br>Assistant Professor\n\t<br>401 454-6529\n\t<br><a href=\"mailto:mailto:bshure@risd.edu\">bshure@risd.edu</a>\n\t</li>\n\t<li>SCULPTURE\n\t<br>\n\t<strong>Taylor Baldwin</strong>\n\t<br>Assistant Professor\n\t<br>401 454-6190\n\t<br><a href=\"mailto:mailto:tbaldwin@risd.edu\">tbaldwin@risd.edu</a>\n\t</li>\n\t<li>TLAD\n\t<br>\n\t<strong>Paul Sliroll</strong>\n\t<br>Professor\n\t<br>401 454-6132\n\t<br><a href=\"mailto:mailto:lisliroll@risd.edu\">lisliroll@risd.edu</a>\n\t</li>\n\t<li>TEXTILES\n\t<br>\n\t<strong>Mary Anne Friel</strong>\n\t<br>Assistant Professor\n\t<br>401 709-8429\n\t<br><a href=\"mailto:mailto:mfriel@risd.edu\">mfriel@risd.edu</a>\n\t</li>\n</ul>"
+        },
+        {
+          "columns": "One Column",
+          "sidebar_text": "<h4>risd career center </h4>\n<p>RISD’s <a href=\"http://www.risdcareers.com/\">Career Center</a> offers a wide range of interesting workshops and programs specifically tailored towards entrepreneurship and other career opportunities in art, design and a growing realm of related areas.\n</p>\n<h4>download pdfs</h4>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Enrollment-option-via-post-2015.pdf\">Enrollment option via post</a>\n</p>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Summer-Foundation-Studies-Program-2015.pdf\">Summer Foundation Studies Program</a>\n</p>\n<p><a href=\"http://gradwelcome.risd.edu/pdf/Computers-Networks-at-RISD-2015.pdf\">Computers+Networks at RISD</a>\n</p>"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "general": {
+      "site_description": "Welcome site for all accepted incoming RISD Graduate Students",
+      "site_name": "risd-grad-welcome"
+    }
+  }
+}

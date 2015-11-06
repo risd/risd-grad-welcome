@@ -4,141 +4,51 @@
 -
 {{ cms.risdgraduatewelcomehomepage.name }}{% endblock %}
 
-{% block header %}
-{% set activeNavItem = 'Welcome' %}
-{% include "templates/partials/header.html" %}
-{% endblock %}
 
-{% set home = cms.risdgraduatewelcomehomepage %}
+
+{% set home = cms.home %}
+{% set modules = cms.home.image_module %}
 
 {% block content %}
 
 <main class="home">
 
-    <section class="text-block--container">
+    <section class="content--container">
+
+    {% block header %}
+    {% set activeNavItem = 'Welcome' %}
+    {% include "templates/partials/header.html" %}
+    {% endblock %}
+
         <div class="text-block--primary">
             <div class="text-block--column__small">
-                <h1 class="text-block--primary-title">{{ home.header_section }}</h1>
+                <h1 class="text-block--primary-title text-block--primary-title__center">{{ home.header_section }}</h1>
             </div>
             <div class="text-block--column__large">{{ home.welcome_text|safe }}</div>
         </div>
+
+        <div class="image-block--container">{% for module in modules %}
+                {% if loop.index%4 === 0 %}
+                    <a href="{{ module.link }}" class="image-block--image__large image-block">
+                {% elseif loop.index%4 === 1 %}
+                    <a href="{{ module.link }}" class="image-block--image__large image-block">
+                {% elseif loop.index%4 === 2 %}
+                    <a href="{{ module.link }}" class="image-block--image__small image-block">
+                {% elseif loop.index%4 === 3 %}
+                    <a href="{{ module.link }}" class="image-block--image__small image-block">
+                {% endif %}
+                        <div class="image-block--image image-block--image__main" style="background-image: url({{ module.image|imageSize(800) }})">
+                            <h2 class="image-block--text">{{ module.title }}</h2>
+                        </div>
+                        <div class="image-block--image image-block--image__alt" style="background-image: url({{ module.image_alt|imageSize(800) }})">
+                            <h2 class="image-block--text">{{ module.title }}</h2>
+                        </div>
+                        </a>
+            {% endfor %}</div>
+            
     </section>
 
 </main>
 
-<div class="container">
-    <div class="twelve columns modules">
-        <div class="seven columns slide video">
-            {% for x in cms.modules %}
-            {% if x.name === "Research" %}
-            <img height="293px" src="{{ x.image.url }}" width="544px">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="five columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "Student exhibitions" %}
-            <img height="293px" src="{{ x.image.url }}" width="377px">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="five columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "Critical Making" %}
-            <img src="{{ x.image.url }}">
-            <a class="two-line video" href="{{ x.website }}">
-                <h2 class="two-line">{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="seven columns slide video">
-            {# Download link. #}
-            {% for x in cms.modules %}
-            {% if x.name === "Steam" %}
-            <img src="{{ x.image.url }}">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="five columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "RISD Museum" %}
-            <img src="{{ x.image.url }}">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="five columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "Grad Thesis Show" %}
-            <img src="{{ x.image.url }}">
-            <a class="two-line" href="{{ x.website }}">
-                <h2 class="two-line">{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="seven columns slide video">
-            {% for x in cms.modules %}
-            {% if x.name === "Women in Art" %}
-            <img src="{{ x.image.url }}">
-            <a class="two-line" href="{{ x.website }}">
-                <h2 class="two-line">{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="six columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "Providence" %}
-            <img src="{{ x.image.url }}">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="six columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "RISD XYZ" %}
-            <img src="{{ x.image.url }}">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="four columns slide">
-            {% for x in cms.modules %}
-            {% if x.name === "Faculty" %}
-            <img src="{{ x.image.url }}">
-            <a class="slide-content" href="{{ x.website }}">
-                <h2>{{ x.single_line_text|safe }}
-                </h2>
-            </a>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</div>
+
 {% endblock %}

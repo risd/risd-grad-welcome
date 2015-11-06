@@ -56,7 +56,7 @@ h1 {
     font-family: $t-font--secondary;
     font-size: $t-title--large;
     font-weight: $t-weight--book;
-    line-height: $t-lineHeight--tight;
+    line-height: $t-lineHeight--semiTight;
     margin-bottom: $l-space--xsmall;
     // margin-left: -$t-size--xsmall/2;
 }
@@ -65,21 +65,20 @@ h2 {
     font-family: $t-font--secondary;
     font-size: $t-title--medium;
     font-weight: $t-weight--book;
-    line-height: $t-lineHeight--tight;
+    line-height: $t-lineHeight--semiTight;
 }
 
 h3 {
-    font-family: $t-font--secondary;
-    font-size: $t-title--small;
-    font-weight: $t-weight--book;
-    font-style: italic;
+    font-family: $t-font--primary;
+    font-size: $t-title--xsmall;
+    font-weight: $t-weight--bold;
     line-height: $t-lineHeight--normal;
 }
 
 h4 {
-    font-family: $t-font--secondary;
-    font-size: $t-title--small;
-    font-weight: $t-weight--book;
+    font-family: $t-font--primary;
+    font-size: $t-title--xsmall;
+    font-weight: $t-weight--bold;
     line-height: $t-lineHeight--normal;
 }
 
