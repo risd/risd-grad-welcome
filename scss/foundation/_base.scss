@@ -123,6 +123,7 @@ ol {
 
 ul {
     @include t-unorderedList;
+    list-style: none;
 }
 
 div,

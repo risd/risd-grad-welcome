@@ -7,6 +7,7 @@
 {% block content %}
 
 <main class="nextsteps">
+    <div class="bg-image"></div>
 
     <section class="content--container">
 
@@ -36,17 +37,55 @@
         </div>
         <div class="text-block--column__small">
             <div class="text-block--tertiary">
-                {% for row in nextsteps.sidebar %}
-                    {% if row.columns === "One Column" %}
-                        <div class="text-block--tertiary__one-column">
-                            {{ row.sidebar_text|safe }}
-                        </div>
-                    {% elseif row.columns === "Two Column" %}
-                        <div class="text-block--tertiary__two-column">
-                            {{ row.sidebar_text|safe }}
-                        </div>
-                    {% endif %}
-                {% endfor %}
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ nextsteps.contact_information_title }}</h4>
+                    <ul>
+                    {% for row in nextsteps.contact_information %}
+                        <li>
+                            {{ row.contact_name }}<br>
+                            {% if row.contact_title %}
+                                {{ row.contact_title }}<br>
+                            {% endif %}
+                            {{ row.phone_number_1 }}<br>
+                            {% if row.phone_number_2 %}
+                                {{ row.phone_number_2 }}<br>
+                            {% endif %}
+                            <a href="mailto:{{ row.email }}">{{ row.email }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ nextsteps.student_alliance_title }}</h4>
+                    {{ nextsteps.student_alliance_text|safe }}
+                </div>
+                <div class="text-block--tertiary__two-column">
+                    <h4>{{ nextsteps.program_directors_title }}</h4>
+                    <ul>
+                    {% for row in nextsteps.program_directors %}
+                        <li>
+                            {{ row.department }}<br>
+                            <strong>{{ row.name }}</strong><br>
+                            {{ row.title }}<br>
+                            {{ row.phone_number }}<br>
+                            <a href="mailto:{{ row.email }}">{{ row.email }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ nextsteps.career_center_title }}</h4>
+                    {{ nextsteps.career_center_text|safe }}
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ nextsteps.pdf_title }}</h4>
+                    {% for row in nextsteps.pdfs %}
+                        <script>
+                            console.log({{row|json|safe}});
+                        </script>
+                        <a href="{{row.pdf_file.url}}">{{ row.pdf_name}}</a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
 

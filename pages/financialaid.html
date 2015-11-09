@@ -8,6 +8,8 @@
 
 <main class="nextsteps">
 
+<div class="bg-image"></div>
+
     <section class="content--container">
 
         {% block header %}
@@ -36,14 +38,24 @@
         </div>
         <div class="text-block--column__small">
             <div class="text-block--tertiary">
-            <script>
-                console.log({{financialAid.sidebar|json|safe}});
-            </script>
-                {% for row in financialAid.sidebar %}
-                    <div class="text-block--tertiary__one-column">
-                        {{ row.sidebar_text|safe }}
-                    </div>
-                {% endfor %}
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ financialAid.contact_information_title }}</h4>
+                    {{ financialAid.contact_name }}<br>
+                    {{ financialAid.phone_number }}<br>
+                    <a href="mailto:{{ finiancialAid.email }}">{{ financialAid.email }}</a>
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ financialAid.planning_title }}</h4>
+                    {{ financialAid.planning_text|safe }}
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ financialAid.loans_title }}</h4>
+                    {{ financialAid.loans_text|safe }}
+                </div>
+                <div class="text-block--tertiary__one-column">
+                    <h4>{{ financialAid.career_title }}</h4>
+                    {{ financialAid.career_text|safe }}
+                </div>
             </div>
         </div>
 
