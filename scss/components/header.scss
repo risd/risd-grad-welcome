@@ -62,22 +62,38 @@
     font-size: $t-body--large;
     font-weight: $t-weight--book;
     @include media($mobile) {
-        width: 50%;
+        background-color: $c--light-yellow;
+        color: $c--dark-grey;
+        padding: $l-space--xsmall;
+        flex-basis: 40%;
+        flex-grow: 1;
+
+        &:nth-child(2n+1) {
+          margin-right: $l-space--xsmall;
+        }
     };
     @include media($tablet) {
         width: auto;
-    };
-    @include media($laptop) {
-
-    };
-    @include media($desktop) {
-
+        background-color: transparent;
+        color: $c--dark-grey;
+        padding: 0;
+        margin-right: $l-space--xsmall;
     };
 
     &:hover {
+      @include media($mobile) {
         color: $c--red;
+      };
+      @include media($tablet) {
+        color: $c--red;
+      };
     }
 }
 .main-nav__item--active {
+  @include media($mobile) {
     color: $c--red;
+  };
+  @include media($tablet) {
+    color: $c--red;
+  };
 }

@@ -2,7 +2,7 @@
 
 {% block title %}{% parent %}
 -
-{{ cms.risdgraduatewelcomehomepage.name }}{% endblock %}
+{{ cms.home.name }}{% endblock %}
 
 
 
@@ -31,19 +31,29 @@
 
         <div class="image-block--container">{% for module in modules %}
                 {% if loop.index%4 === 0 %}
-                    <a href="{{ module.link }}" class="image-block--image__large image-block">
+                    <a href="{{ module.link }}" class="image-block--image__large image-block" target="_blank">
                 {% elseif loop.index%4 === 1 %}
-                    <a href="{{ module.link }}" class="image-block--image__large image-block">
+                    <a href="{{ module.link }}" class="image-block--image__large image-block" target="_blank">
                 {% elseif loop.index%4 === 2 %}
-                    <a href="{{ module.link }}" class="image-block--image__small image-block">
+                    <a href="{{ module.link }}" class="image-block--image__small image-block" target="_blank">
                 {% elseif loop.index%4 === 3 %}
-                    <a href="{{ module.link }}" class="image-block--image__small image-block">
+                    <a href="{{ module.link }}" class="image-block--image__small image-block" target="_blank">
                 {% endif %}
                         <div class="image-block--image image-block--image__main" style="background-image: url({{ module.image|imageSize(800) }})">
-                            <h2 class="image-block--text">{{ module.title }}</h2>
+                            <h2 class="image-block--text">
+                              {{ module.title }}
+                              {% if module.video_link %}
+                                <br> <span>‣</span>
+                              {% endif %}
+                            </h2>
                         </div>
                         <div class="image-block--image image-block--image__alt" style="background-image: url({{ module.image_alt|imageSize(800) }})">
-                            <h2 class="image-block--text">{{ module.title }}</h2>
+                            <h2 class="image-block--text">
+                              {{ module.title }}
+                              {% if module.video_link %}
+                                <br> <span>‣</span>
+                              {% endif %}
+                            </h2>
                         </div>
                         </a>
             {% endfor %}</div>

@@ -26,6 +26,11 @@
     @include media($desktop) {
         height: 400px;
     };
+
+    span {
+      font-size: 8rem;
+      line-height: 0.5;
+    }
 }
 .image-block {
     @include omega(2n);

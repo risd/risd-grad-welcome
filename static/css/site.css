@@ -1220,20 +1220,49 @@ section {
 }
 @media screen and (min-width: 300px) {
   .main-nav__item {
-    width: 50%;
+    background-color: #f1efb2;
+    color: #282832;
+    padding: 0.833rem;
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .main-nav__item:nth-child(2n+1) {
+    margin-right: 0.833rem;
   }
 }
 @media screen and (min-width: 768px) {
   .main-nav__item {
     width: auto;
+    background-color: transparent;
+    color: #282832;
+    padding: 0;
+    margin-right: 0.833rem;
   }
 }
-.main-nav__item:hover {
-  color: #c7462a;
+@media screen and (min-width: 300px) {
+  .main-nav__item:hover {
+    color: #c7462a;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav__item:hover {
+    color: #c7462a;
+  }
 }
 
-.main-nav__item--active {
-  color: #c7462a;
+@media screen and (min-width: 300px) {
+  .main-nav__item--active {
+    color: #c7462a;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav__item--active {
+    color: #c7462a;
+  }
 }
 
 .footer {
@@ -1689,7 +1718,7 @@ section {
 }
 
 .text-block--tertiary {
-  font-size: 1rem;
+  font-size: 12px;
   background-color: #eee809;
   padding: 2.499rem;
 }
@@ -1803,7 +1832,22 @@ section {
           flex-wrap: wrap;
 }
 .text-block--tertiary__two-column li {
-  width: 50%;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+.text-block--tertiary__two-column li:last-child {
+  margin-right: 0;
+}
+.text-block--tertiary__two-column li:nth-child(2n) {
+  margin-right: 0;
 }
 
 .submit-deposit {
@@ -1813,6 +1857,11 @@ section {
   color: #f1efb2 !important;
   font-size: 1.95313rem;
   cursor: pointer;
+  margin: 1.666rem auto;
+  line-height: 1.4;
+}
+.submit-deposit:hover {
+  color: #eee809 !important;
 }
 
 @media screen and (min-width: 300px) {
@@ -1860,6 +1909,10 @@ section {
   .image-block--image {
     height: 400px;
   }
+}
+.image-block--image span {
+  font-size: 8rem;
+  line-height: 0.5;
 }
 
 .image-block:nth-child(2n) {

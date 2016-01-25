@@ -124,7 +124,7 @@
     background-color: $c--light-grey;
 }
 .text-block--tertiary {
-    font-size: $t-body--small;
+    font-size: 12px;
     background-color: $c--yellow;
     padding: $l-space--medium;
     a {
@@ -169,7 +169,16 @@
         flex-wrap: wrap;
     }
     li {
-        width: 50%;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+        @include span-columns(3 of 6);
+
+        &:nth-child(2n) {
+          @include omega;
+        }
     }
 }
 
@@ -180,4 +189,10 @@
     color: $c--light-yellow !important;
     font-size: $t-title--small;
     cursor: pointer;
+    margin: $l-space--small auto;
+    line-height: $t-lineHeight--semiTight;
+
+    &:hover {
+      color: $c--yellow !important;
+    }
 }
