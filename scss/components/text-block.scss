@@ -109,10 +109,15 @@
     font-family: $t-font--secondary;
     font-size: $t-title--xsmall;
     line-height: $t-lineHeight--normal;
+    a {
+      color: $c--yellow;
+      border-bottom: 1px solid $c--light-yellow;
+    }
 }
 .text-block--secondary {
     font-size: $t-body--large;
     padding: $l-space--medium;
+    line-height: 1.8;
     a {
         color: $c--red;
     }

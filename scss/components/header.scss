@@ -88,6 +88,11 @@
         color: $c--red;
       };
     }
+
+    span {
+      display: inline-block;
+      transform: rotate(-45deg);
+    }
 }
 .main-nav__item--active {
   @include media($mobile) {

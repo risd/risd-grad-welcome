@@ -854,6 +854,7 @@ html {
 body {
   font-size: 1.25rem;
   font-weight: 200;
+  line-height: 1.666;
 }
 
 a {
@@ -1252,6 +1253,12 @@ section {
   .main-nav__item:hover {
     color: #c7462a;
   }
+}
+.main-nav__item span {
+  display: inline-block;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 300px) {
@@ -1700,10 +1707,15 @@ section {
   font-size: 1.5625rem;
   line-height: 1.666;
 }
+.text-block--primary-subtitle a {
+  color: #eee809;
+  border-bottom: 1px solid #f1efb2;
+}
 
 .text-block--secondary {
   font-size: 1.25rem;
   padding: 2.499rem;
+  line-height: 1.8;
 }
 .text-block--secondary a {
   color: #c7462a;
@@ -2061,10 +2073,6 @@ section {
 
 body {
   background: #eee809;
-  font: 13px/22px 'Gotham', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-weight: 400;
-  color: #444;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;

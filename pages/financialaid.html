@@ -55,6 +55,9 @@
                 <div class="text-block--tertiary__one-column">
                     <h4>{{ financialAid.career_title }}</h4>
                     {{ financialAid.career_text|safe }}
+                    <script>
+                      console.log({{financialAid|json|safe}});
+                    </script>
                 </div>
             </div>
         </div>
