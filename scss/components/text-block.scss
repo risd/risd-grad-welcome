@@ -71,6 +71,12 @@
         @include span-columns(4 of 6);
     };
 }
+.text-block--home {
+  color: $c--light-yellow;
+  font-family: $t-font--secondary;
+  font-size: $t-title--xsmall;
+  line-height: $t-lineHeight--normal;
+}
 .text-block--primary {
     // @include fill-parent;
     @include row;
@@ -104,7 +110,6 @@
     };
 }
 .text-block--primary-subtitle {
-    font-size: $t-title--small;
     color: $c--light-yellow;
     font-family: $t-font--secondary;
     font-size: $t-title--xsmall;
@@ -131,7 +136,7 @@
 .text-block--tertiary {
     font-size: 12px;
     background-color: $c--yellow;
-    padding: $l-space--medium;
+    padding: $l-space--xsmall;
     a {
         color: $c--red;
     }
