@@ -50,7 +50,7 @@
                             {% if row.phone_number_2 %}
                                 {{ row.phone_number_2 }}<br>
                             {% endif %}
-                            <a href="mailto:{{ row.email }}">{{ row.email }}</a>
+                            <a href="mailto:{{ row.email }}" target="_blank">{{ row.email }}</a>
                         </li>
                     {% endfor %}
                     </ul>
@@ -64,7 +64,7 @@
                             <strong>{{ row.name }}</strong><br>
                             {{ row.title }}<br>
                             {{ row.phone_number }}<br>
-                            <a href="mailto:{{ row.email }}">{{ row.email }}</a>
+                            <a href="mailto:{{ row.email }}" target="_blank">{{ row.email }}</a>
                         </li>
                     {% endfor %}
                     </ul>
@@ -84,10 +84,7 @@
                 <div class="text-block--tertiary__one-column">
                     <h4>{{ nextsteps.pdf_title }}</h4>
                     {% for row in nextsteps.pdfs %}
-                        <script>
-                            console.log({{row|json|safe}});
-                        </script>
-                        <a href="{{row.pdf_file.url}}">{{ row.pdf_name}}</a>
+                        <a href="{{row.pdf_file.url}}" target="_blank">{{ row.pdf_name}}</a>
                     {% endfor %}
                 </div>
             </div>
