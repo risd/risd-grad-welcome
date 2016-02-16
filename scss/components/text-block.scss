@@ -9,13 +9,13 @@
         margin-bottom: flex-gutter(8);
     };
     @include media($laptop) {
-        @include span-columns(8 of 10);
+        @include span-columns(10 of 12);
         @include shift(1);
         margin-bottom: flex-gutter(10);
     };
     @include media($desktop) {
-        @include span-columns(6 of 12);
-        @include shift(3);
+        @include span-columns(8 of 12);
+        @include shift(2);
         margin-bottom: flex-gutter(12);
     };
 }
@@ -33,10 +33,10 @@
         @include span-columns(3 of 6);
     };
     @include media($laptop) {
-        @include span-columns(4 of 8);
+        @include span-columns(5 of 10);
     };
     @include media($desktop) {
-        @include span-columns(3 of 6);
+        @include span-columns(4 of 8);
     };
 }
 .text-block--column__small {
@@ -49,11 +49,11 @@
         display: flex;
     };
     @include media($laptop) {
-        @include span-columns(3 of 8);
+        @include span-columns(4 of 10);
         display: flex;
     };
     @include media($desktop) {
-        @include span-columns(2 of 6);
+        @include span-columns(3 of 8);
         display: flex;
     };
 }
@@ -65,10 +65,10 @@
         @include span-columns(6 of 6);
     };
     @include media($laptop) {
-        @include span-columns(5 of 8);
+        @include span-columns(6 of 10);
     };
     @include media($desktop) {
-        @include span-columns(4 of 6);
+        @include span-columns(5 of 8);
     };
 }
 .text-block--home {
@@ -136,7 +136,7 @@
 .text-block--tertiary {
     font-size: 12px;
     background-color: $c--yellow;
-    padding: $l-space--xsmall;
+    padding: $l-space--large 0;
     a {
         color: $c--red;
     }
@@ -153,10 +153,10 @@
         @include span-columns(6 of 6);
     };
     @include media($laptop) {
-        @include span-columns(3 of 3);
+        @include span-columns(4 of 4);
     };
     @include media($desktop) {
-        @include span-columns(2 of 2);
+        @include span-columns(3 of 3);
     };
 }
 .text-block--tertiary__two-column {
@@ -167,10 +167,10 @@
         @include span-columns(6 of 6);
     };
     @include media($laptop) {
-        @include span-columns(3 of 3);
+        @include span-columns(4 of 4);
     };
     @include media($desktop) {
-        @include span-columns(2 of 2);
+        @include span-columns(3 of 3);
     };
     ul {
         list-style: none;
