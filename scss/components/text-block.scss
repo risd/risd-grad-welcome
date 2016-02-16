@@ -134,9 +134,16 @@
     background-color: $c--light-grey;
 }
 .text-block--tertiary {
-    font-size: 12px;
     background-color: $c--yellow;
     padding: $l-space--large 0;
+
+    @include media($mobile) {
+      font-size: 11px;
+    };
+    @include media($tablet) {
+      font-size: 12px;
+    };
+
     a {
         color: $c--red;
     }

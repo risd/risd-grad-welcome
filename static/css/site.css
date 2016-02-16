@@ -1736,9 +1736,18 @@ section {
 }
 
 .text-block--tertiary {
-  font-size: 12px;
   background-color: #eee809;
   padding: 4.165rem 0;
+}
+@media screen and (min-width: 300px) {
+  .text-block--tertiary {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-block--tertiary {
+    font-size: 12px;
+  }
 }
 .text-block--tertiary a {
   color: #c7462a;
