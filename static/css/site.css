@@ -1745,6 +1745,7 @@ section {
 }
 .text-block--tertiary p {
   margin-bottom: 0;
+  margin-right: 1.666rem;
 }
 
 .text-block--tertiary__one-column {
